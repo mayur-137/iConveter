@@ -1,0 +1,35 @@
+{% extends 'apis/base.html' %}
+{% block title %} Tools | iConveter.in {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/apis/css/All-Features.css" media="screen">
+{% endblock %}
+{% block class %} class="u-body u-xxl-mode" {% endblock %}
+{% block body %}
+
+<section
+        class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-clearfix u-custom-border u-uploaded-video u-section-1"
+        id="sec-aaca">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-center u-text u-text-default u-title u-text-1">All Features Ready to Use</h1>
+        <div class="u-expanded-width-xs u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                {% for feture in Allfeatures %}
+                <a href="/{{feture.FeaturesName}}/" class="mayur ">
+                    <div class="u-align-center u-border-2 u-border-black u-border-no-bottom u-border-no-left u-border-no-right u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-1"
+                         data-animation-name="pulse" data-animation-duration="2000" data-animation-direction="">
+                        <div class="u-container-layout u-similar-container u-container-layout-1"><span
+                                class="u-custom-item u-file-icon u-icon u-icon-circle u-palette-1-base u-spacing-10 u-icon-1"><img
+                                src="/media/images/img_internal/{{ feture.FeaturesImages }}" alt=""></span>
+                            <h4 class="u-text u-text-2" id="fname">{{ feture.FeaturesName }} </h4>
+                            <p class="u-text u-text-grey-40 u-text-3">{{ feture.FeaturesDesc }}.&nbsp;</p>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

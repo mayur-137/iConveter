@@ -1,0 +1,42 @@
+{% extends 'apis/base.html' %}
+{% block title %} Features | iConveter.in {% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="/static/apis/css/Fetures-page.css" media="screen">
+{% endblock %}
+{% block class %} class="u-body u-xxl-mode" {% endblock %}
+{% block body %}
+    <section class="drag-area">
+        <h3 id="h3"> Drag and Drop {{Heading}} Here </h3>
+        <span>or</span>
+        <p>You can also select upload button to upload files</p>
+            <form action="/iVerify/" name="files" method="POST" id="form" enctype="multipart/form-data">{% csrf_token %}
+                <input type="file" id="input" name="file" accept="{{Ext}}" hidden>
+                <span name="FnName" id="FnName" hidden>{{FunctionName}}</span>
+                <button type="button" id="btn">SELECT FILE</button>
+            </form>
+
+    </section>
+    <section class="u-clearfix u-color-scheme-u11 u-color-style-multicolor-1 u-section-2" id="sec-32da">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+                <div class="u-layout">
+                    <div class="u-layout-row">
+                        <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-layout-cell u-left-cell u-size-46 u-layout-cell-1">
+                            <div class="u-container-layout u-valign-top u-container-layout-1">
+                                <h3 class="u-text u-text-default u-text-1">Try this now!</h3>
+                                <p class="u-text u-text-2">Sample text. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+                            </div>
+                        </div>
+                        <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-14 u-layout-cell-2">
+                            <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                <a href="###" class="u-btn u-button-style u-white u-btn-1">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

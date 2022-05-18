@@ -1,0 +1,26 @@
+{% extends 'apis/base.html' %}
+{% block title %} File Action| iConveter.in {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/apis/css/Fetures-update-page.css" media="screen">
+{% endblock %}
+{% block body %}
+<section class="u-clearfix u-section-1" id="sec-40cf">
+    <div class="u-align-left-xs u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default-xs u-text-1">Your JPG Image</h2>
+        <img class="" style="display:flex; margin: auto; max-height: 60%; wmax-width: 60%;" src="/media/images/{{ fileName }}" alt="">
+        <h2 class="u-align-center u-text u-text-default-xs u-text-2">Your PNG Image</h2>
+        <img  style="display:flex; margin: auto; max-height: 60%; max-width: 60%;"  alt="" src="/media/images/{{ fileName }}">
+        <a href="D:/codePlayGround/iConveter/Backend{{url}}"
+           class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">Button</a>
+    </div>
+</section>
+{% endblock %}
+
+<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-2344">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-custom-font u-font-ubuntu u-small-text u-text u-text-variant u-text-1">iConveter.in&nbsp;
+            &nbsp;All Rights Reserved 2022-23</p>
+    </div>
+</footer>
+</body>
+</html>
